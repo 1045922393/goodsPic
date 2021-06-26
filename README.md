@@ -40,3 +40,10 @@ export const projectDirname = path.join(__dirname)
 当使用ejs.renderFile(filename,option,callback)
 filename使用路径'../ejs/pages/index.ejs' (相对s_getPic.mjs文件路径是没有问题的)报错了 使用'./ejs/pages/index.ejs'才成功(难不成这是相对script.mjs的路径吗) 最后为了避免想疯了 使用__dirname绝对路径
 
+# 内网穿透
+
+使用ngrok 
+安装
+`npm i ngrok -g`
+启动服务
+`ngrok http {port}`
