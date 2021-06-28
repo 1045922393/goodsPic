@@ -1,6 +1,15 @@
-import getPic from '../controller/getPic.mjs'
+import getPic, { getPicUrl } from '../controller/getPic.mjs'
 
 export default [{
-    path: '/',
-    method: getPic
-}]
+  path: '/getPicUrl',
+  method: getPicUrl
+},
+{
+  path: '/:pure',
+  method: getPic
+},
+{
+  path: '/',
+  method: getPic
+},
+]

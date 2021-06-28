@@ -1,14 +1,19 @@
 <%- include('../common/head.ejs'); %>
-<div style="width: 600px">
-  <% picList.forEach(function(item){%>
-    <img title="http://api.nmb.show/xiaojiejie1.php" src="http://api.nmb.show/xiaojiejie1.php" />
-    <img title="http://api.nmb.show/xiaojiejie2.php" src="http://api.nmb.show/xiaojiejie2.php" />
-    <img title="https://cdn.seovx.com/?mom=302" src="https://cdn.seovx.com/?mom=302" />
-    <img title="https://cdn.seovx.com/ha/?mom=302" src="https://cdn.seovx.com/ha/?mom=302" style="max-width: 100%; max-height: 100%;">
-    <img title="<%=item %>" src="<%=item %>">
-  <% }) %>
-</div>
-<div>
-  <a href="http://www.jutuwu.com/" target="_blank">更多精彩</a>
-</div>
-<%- include('../common/foot.ejs'); %>
+  <div class="picPage">
+    <div class="pic_layout">
+      <% picList.forEach(function(item){%>
+        <!-- <img title="http://api.nmb.show/xiaojiejie1.php" src="http://api.nmb.show/xiaojiejie1.php" /> -->
+        <!-- <img title="http://api.nmb.show/xiaojiejie2.php" src="http://api.nmb.show/xiaojiejie2.php" /> -->
+        <!-- <img title="https://cdn.seovx.com/?mom=302" src="https://cdn.seovx.com/?mom=302" /> -->
+        <!-- <img title="https://cdn.seovx.com/ha/?mom=302" src="https://cdn.seovx.com/ha/?mom=302" style="max-width: 100%; max-height: 100%;"> -->
+        <img class="picImg" title="<%=item %>" src="<%=item %>">
+        <% }) %>
+    </div>
+    <div class="mask hidden"></div>
+    <!-- <div>
+      <a href="http://www.jutuwu.com/" target="_blank">更多精彩</a>
+    </div> -->
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/script/index.js"></script>
+  <%- include('../common/foot.ejs'); %>

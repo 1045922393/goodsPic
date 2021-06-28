@@ -4,6 +4,8 @@
   "description": "",
   "main": "script.js",
   "scripts": {
+    "start": "nodemon script.mjs",
+    "online": "ngrok http 3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
