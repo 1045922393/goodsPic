@@ -6,7 +6,7 @@ import path from 'path';
 export default (pure = '100') => {
     return new Promise(async (resolve, reject) => {
         let picUrl = await picStore.getPic(pure)
-        ejs.renderFile(path.join(projectDirname, 'ejs/pages/index.ejs'), { picList: [picUrl] }, async function (err, str) {
+        ejs.renderFile(path.join(projectDirname, 'ejs/pages/index.ejs'), { picList: picUrl }, async function (err, str) {
             if (err) {
                 reject(err)
                 return;
@@ -19,6 +19,6 @@ export default (pure = '100') => {
 export const s_gitPicUrl = (pure) => {
   return new Promise(async (resolve, reject) => {
     let picUrl = await picStore.getPic(pure);
-    resolve(picUrl);
+    resolve(picUrl[0]);
   })
 }

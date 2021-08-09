@@ -13,11 +13,11 @@ class Picture {
     this.list[pureType] = onlyOne;
   }
 
-  async getPic(pure = '100') {
-    if (pure !== pureType[0] && pure !== pureType[1] && pure !== pureType[2]) pure = pureType[0]
+  async getPic(pure = '100', num = 1) {
+    if (!pureType.includes(pure)) pure = pureType[0]
     if (this.list[pure] && this.list[pure].length > 0) {
       console.log('this pic purity is ', pure);
-      return this.list[pure].splice(Math.floor(Math.random() * this.list.length), 1)[0]
+      return this.list[pure].splice(Math.floor(Math.random() * this.list.length), num)
     } else {
       const picRes = await getPic(pure)
       this.setList(picRes.map(item => item.path), pure)

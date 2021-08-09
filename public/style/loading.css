@@ -1,0 +1,49 @@
+:root {
+  --max_height: 60px;
+  --min_height: 40px
+}
+.mask {
+  position: absolute;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+}
+.window_center {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.mask .loading_bar {
+  width: 10px;
+  height: var(--max_height);
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 0 4px;
+  animation: run 1s linear infinite;
+  animation-delay: var(--i);
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes run {
+  0% {
+    height: var(--max_height);
+  }
+  50% {
+    height: var(--min_height);
+  }
+  100% {
+    height: var(--max_height);
+  }
+}

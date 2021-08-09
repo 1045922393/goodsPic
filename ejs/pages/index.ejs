@@ -9,11 +9,13 @@
         <img class="picImg" title="<%=item %>" src="<%=item %>">
         <% }) %>
     </div>
-    <div class="mask hidden"></div>
+    <%- include('../components/loading.ejs'); %>
+    <!-- <div class="mask hidden"></div> -->
     <!-- <div>
       <a href="http://www.jutuwu.com/" target="_blank">更多精彩</a>
     </div> -->
   </div>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="/script/index.js"></script>
+  <script type="text/label" src="antd/dist/antd.js"></script>
+  <script type="module" src="/script/index.js"></script>
   <%- include('../common/foot.ejs'); %>

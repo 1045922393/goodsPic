@@ -9,7 +9,7 @@ export default [{
   method: getPic
 },
 {
-  path: '/',
+  path: '/*',
   method: getPic
 },
 ]
