@@ -18,6 +18,12 @@ body{
 li{
 	list-style: none;
 }
+
+li img {
+  object-fit: cover;
+  object-position: center;
+}
+
 .box{
 	width:200px;
 	height:200px;
