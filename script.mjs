@@ -7,7 +7,7 @@ import postRouters from './router/post.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express()
-const port = 3000
+const port = 7814
 // commonHead + style + commonNav + body + commonFoot
 
 app.use(express.json());
