@@ -3,7 +3,8 @@ import { showLoading, hideLoading } from './methods/loading/index.mjs'
 (() => {
   let img = document.querySelector('.picImg');
   function addClick() {
-    let pure = window.location.pathname.match(/(?<=pure\/)\d*/)[0]
+    let pureParam = window.location.pathname.match(/(?<=pure\/)\d*/)
+    let pure = pureParam ? pureParam[0] : '001'
     let api = '/getPicUrl';
     if(pure) api += `?pure=${pure}`
     document.removeEventListener('click', addClick)
