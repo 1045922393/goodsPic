@@ -5,7 +5,8 @@
   "main": "script.js",
   "scripts": {
     "start": "nodemon script.mjs",
-    "online": "ngrok http 3000",
+    "online": "ngrok http 7814",
+    "remark": "the port in script online must be as same as the one in start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "ngrok": "^4.3.3"
   }
 }

@@ -47,3 +47,4 @@ filename使用路径'../ejs/pages/index.ejs' (相对s_getPic.mjs文件路径是�
 `npm i ngrok -g`
 启动服务
 `ngrok http {port}`
+PS: port需要跟本地启动服务的port一致,ngrok所做就是监听并转发本地启动服务链接
